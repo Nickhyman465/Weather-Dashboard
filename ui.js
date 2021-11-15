@@ -12,7 +12,7 @@ class UI {
     var weatherIconUrlDay4 = `http://openweathermap.org/img/wn/${data.list[17].weather[0].icon}@2x.png`
     var weatherIconUrlDay5 = `http://openweathermap.org/img/wn/${data.list[29].weather[0].icon}@2x.png`
     
-
+    //Each card contains city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
         this.uiContainer.innerHTML = `
   <div class="container">
       <div class="row"> 
@@ -20,7 +20,9 @@ class UI {
             <div class="card-body justify-content-center">
                 <h5 class="card-title">${data.city.name}  ${data.list[0].dt_txt}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Highs of ${data.list[0].main.temp_max}. Lows of ${data.list[0].main.temp_min}</h6>
-                <p class="card-text">Weather conditions are described as: ${data.list[0].weather[0].description}.</p>
+                <p class="card-text">Humidity: ${data.list[0].main.humidity}%</p>
+                <p class="card-text">Wind Speeds of: ${data.list[0].wind.speed}mph</p>
+                <p class="card-text">Weather conditions: ${data.list[0].weather[0].description}.</p>
                 <img src="${weatherIconUrlDay1}" class="rounded mx-auto d-block" alt="...">
             </div>
         </div>
@@ -29,6 +31,8 @@ class UI {
             <div class="card-body justify-content-center">
                 <h5 class="card-title">${data.city.name}  ${data.list[5].dt_txt}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Highs of ${data.list[5].main.temp_max}. Lows of ${data.list[5].main.temp_min}</h6>
+                <p class="card-text">Humidity: ${data.list[5].main.humidity}%</p>
+                <p class="card-text">Wind Speeds of: ${data.list[5].wind.speed}mph</p>
                 <p class="card-text">Weather conditions are described as: ${data.list[5].weather[0].description}</p>
                 <img src="${weatherIconUrlDay2}" class="rounded mx-auto d-block" alt="...">
             </div>
@@ -38,6 +42,8 @@ class UI {
             <div class="card-body justify-content-center">
                 <h5 class="card-title">${data.city.name}  ${data.list[13].dt_txt}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Highs of ${data.list[13].main.temp_max}. Lows of ${data.list[13].main.temp_min}</h6>
+                <p class="card-text">Humidity: ${data.list[13].main.humidity}%</p>
+                <p class="card-text">Wind Speeds of: ${data.list[13].wind.speed}mph</p>
                 <p class="card-text">Weather conditions are described as: ${data.list[13].weather[0].description}</p>
                 <img src="${weatherIconUrlDay3}" class="rounded mx-auto d-block" alt="...">
             </div>
@@ -47,6 +53,8 @@ class UI {
             <div class="card-body justify-content-center">
                 <h5 class="card-title">${data.city.name}  ${data.list[17].dt_txt}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Highs of ${data.list[17].main.temp_max}. Lows of ${data.list[17].main.temp_min}</h6>
+                <p class="card-text">Humidity: ${data.list[17].main.humidity}%</p>
+                <p class="card-text">Wind Speeds of: ${data.list[17].wind.speed}mph</p>
                 <p class="card-text">Weather conditions are described as: ${data.list[17].weather[0].description}</p>
                 <img src="${weatherIconUrlDay4}" class="rounded mx-auto d-block" alt="...">
             </div>
@@ -56,6 +64,8 @@ class UI {
             <div class="card-body justify-content-center">
                 <h5 class="card-title">${data.city.name}  ${data.list[29].dt_txt}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Highs of ${data.list[29].main.temp_max}. Lows of ${data.list[29].main.temp_min}</h6>
+                <p class="card-text">Humidity: ${data.list[29].main.humidity}%</p>
+                <p class="card-text">Wind Speeds of: ${data.list[29].wind.speed}mph</p>
                 <p class="card-text">Weather conditions are described as: ${data.list[29].weather[0].description}</p>
                 <img src="${weatherIconUrlDay5}" class="rounded mx-auto d-block" alt="...">
             </div>
